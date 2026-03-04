@@ -1,0 +1,58 @@
+/* global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme Variables */
+    --color-bg:           249 248 246;
+    --color-surface:      239 233 227;
+    --color-accent:       201 181 156;
+    --color-text:         42 31 20;
+    --color-text-sub:     122 101 82;
+  }
+
+  .dark {
+    /* Dark Theme Variables */
+    --color-bg:           20 21 7;
+    --color-surface:      30 33 9;
+    --color-accent:       174 183 132;
+    --color-text:         243 232 223;
+    --color-text-sub:     200 188 159;
+  }
+}
+
+@layer utilities {
+  /* Arabic text RTL */
+  .text-arabic {
+    @apply font-arabic text-right;
+    writing-direction: rtl;
+    direction: rtl;
+  }
+
+  /* Glassmorphism */
+  .glass-dark {
+    background-color: rgba(20, 21, 7, 0.7);
+    backdrop-filter: blur(20px);
+  }
+  .glass-light {
+    background-color: rgba(249, 248, 246, 0.8);
+    backdrop-filter: blur(20px);
+  }
+
+  /* Sage glow */
+  .glow-sage {
+    box-shadow: 0 0 24px rgba(174, 183, 132, 0.35);
+  }
+
+  /* Gold glow */
+  .glow-gold {
+    box-shadow: 0 0 28px rgba(212, 175, 55, 0.40);
+  }
+
+  /* Card hover */
+  .card-hover {
+    @apply transition-all duration-200 active:scale-95;
+  }
+}
